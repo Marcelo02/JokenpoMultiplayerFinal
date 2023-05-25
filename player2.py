@@ -5,6 +5,7 @@ params = pika.URLParameters(url)
 connection = pika.BlockingConnection(params)
 channel = connection.channel()
 channel.queue_declare(queue='fila')
+channel.queue_declare(queue='vencedor')
 
 
 def callback(ch, method, properties, body):
@@ -12,6 +13,8 @@ def callback(ch, method, properties, body):
     p2_move = get_player_move()
     result = determine_winner(p1_move, p2_move)
     print(result)
+    channel.basic_publish(exchange='', routing_key='vencedor', body=result)
+
 
 
 def get_player_move():

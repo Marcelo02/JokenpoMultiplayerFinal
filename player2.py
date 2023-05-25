@@ -16,6 +16,7 @@ def callback(ch, method, properties, body):
 
 def get_player_move():
     while True:
+        print("Hello player 2!")
         move = input("Enter your move (rock, paper, or scissors): ").lower()
         if move in ['rock', 'paper', 'scissors']:
             return move

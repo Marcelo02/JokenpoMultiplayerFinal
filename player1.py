@@ -8,6 +8,7 @@ channel.queue_declare(queue='fila')
 
 
 def send():
+    print("Hello player 1!")
     move = input("Enter your move (rock, paper, or scissors): ").lower()
     while move not in ['rock', 'paper', 'scissors']:
         print("Invalid move. Please try again.")

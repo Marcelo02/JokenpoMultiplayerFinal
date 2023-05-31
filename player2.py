@@ -1,3 +1,9 @@
+#Kaique Zuba Silva
+#Igor Cristiano
+#Maria Clara Rezende Vianna
+#Rafael da Silva Mariano
+#Marcelo Manhães de Souza Júnior
+
 import pika
 
 url = 'amqps://hgglhdrq:PCCHVDRLB-NiZeJyAiHwnmu5dNUliGNg@jackal.rmq.cloudamqp.com/hgglhdrq'
